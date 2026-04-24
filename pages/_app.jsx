@@ -8,9 +8,9 @@ export default function App({ Component, pageProps }) {
   return (
     <ErrorBoundary>
       <Head>
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-        <link rel="shortcut icon" href="/logo.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="icon" href="/logo-white.png" type="image/png" />
+        <link rel="shortcut icon" href="/logo-white.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo-white.png" />
       </Head>
       <div className="flex flex-col min-h-screen">
         <Header />

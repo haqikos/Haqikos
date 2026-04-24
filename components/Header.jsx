@@ -80,9 +80,9 @@ const Header = () => {
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center space-x-2">
               <img
-                src="/logo.svg"
+                src="/logo-white.png"
                 alt="Haqikos"
-                style={{ height: "36px", width: "auto", objectFit: "contain" }}
+                style={{ height: "40px", width: "auto", objectFit: "contain" }}
               />
               <span className="text-white font-bold text-xl">Haqikos</span>
             </a>

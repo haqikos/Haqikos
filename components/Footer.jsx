@@ -83,7 +83,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center space-x-2 mb-4">
               <img
-                src="/logo.svg"
+                src="/logo-white.png"
                 alt="Haqikos"
                 style={{ height: "40px", width: "auto", objectFit: "contain" }}
               />
