@@ -520,7 +520,7 @@ export default function APIDocs() {
                   Contact Developer Support
                 </a>
                 <a
-                  href="/products"
+                  href="/projects"
                   className="btn-secondary inline-flex items-center justify-center"
                 >
                   Explore Our Products

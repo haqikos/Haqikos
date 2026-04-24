@@ -26,9 +26,9 @@ const Footer = () => {
       ]
     },
     {
-      title: "Products",
+      title: "Projects",
       links: [
-        { name: "AI Products", href: "/products" },
+        { name: "Active Projects", href: "/projects" },
         { name: "API Documentation", href: "/api-docs" },
         { name: "Research", href: "/research" }
       ]
@@ -153,8 +153,8 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Haqikos. All rights reserved.
+            <div className="text-gray-400 text-sm mb-4 md:mb-0 flex items-center">
+              © {currentYear} Haqikos. Made with ❤️ in India 🇮🇳
             </div>
 
             {/* Social Links */}

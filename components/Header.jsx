@@ -47,10 +47,10 @@ const Header = () => {
       ],
     },
     {
-      name: "Products",
+      name: "Projects",
       href: "#",
       dropdown: [
-        { name: "AI Products", href: "/products" },
+        { name: "Active Projects", href: "/projects" },
         { name: "API Documentation", href: "/api-docs" },
       ],
     },

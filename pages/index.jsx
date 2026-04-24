@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
+import AboutStats from "../components/AboutStats";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import ProductHighlight from "../components/ProductHighlight";
@@ -109,6 +110,7 @@ export default function Home() {
         <PerformanceMonitor />
         <Header />
         <HeroSection />
+        <AboutStats />
         <Features />
         <Testimonials />
         <ProductHighlight />

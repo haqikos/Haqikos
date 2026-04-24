@@ -23,55 +23,30 @@ export default function Research() {
       icon: <Brain className="w-8 h-8" />,
       title: "Artificial General Intelligence",
       description: "Pioneering research in AGI, exploring consciousness, reasoning, and human-like intelligence.",
-      focus: ["Cognitive architectures", "Reasoning systems", "Learning paradigms", "Ethical frameworks"],
-      status: "Active Research",
-      papers: 12,
-      team: "15 researchers"
+      focus: ["Cognitive architectures", "Reasoning systems", "Learning paradigms"],
+      status: "Active Research"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Quantum AI",
       description: "Exploring the intersection of quantum computing and artificial intelligence for breakthrough performance.",
-      focus: ["Quantum algorithms", "Quantum neural networks", "Quantum optimization", "Quantum machine learning"],
-      status: "Breakthrough Phase",
-      papers: 8,
-      team: "12 researchers"
+      focus: ["Quantum algorithms", "Quantum neural networks", "Quantum optimization"],
+      status: "Breakthrough Phase"
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
       title: "Advanced NLP",
       description: "Pushing the boundaries of natural language understanding, generation, and multilingual processing.",
-      focus: ["Language models", "Semantic understanding", "Cross-lingual transfer", "Context reasoning"],
-      status: "Production Ready",
-      papers: 20,
-      team: "18 researchers"
-    },
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "AI Safety & Alignment",
-      description: "Ensuring AI systems are safe, beneficial, and aligned with human values and intentions.",
-      focus: ["Value alignment", "Robustness", "Interpretability", "Control mechanisms"],
-      status: "Critical Priority",
-      papers: 15,
-      team: "10 researchers"
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Federated Learning",
-      description: "Developing privacy-preserving AI systems that learn from distributed data without centralization.",
-      focus: ["Privacy preservation", "Distributed optimization", "Secure aggregation", "Edge computing"],
-      status: "Deployment Phase",
-      papers: 6,
-      team: "8 researchers"
+      focus: ["Language models", "Semantic understanding", "Cross-lingual transfer"],
+      status: "Production Ready"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "AI Security",
-      description: "Protecting AI systems from adversarial attacks and ensuring robust, trustworthy AI.",
-      focus: ["Adversarial robustness", "Privacy protection", "Model security", "Trust verification"],
-      status: "Active Research",
-      papers: 9,
-      team: "11 researchers"
+      title: "Lab R-2.0 (Confidential)",
+      description: "Classified next-generation computing frameworks.",
+      focus: ["Neural Linkages", "Exascale Processing", "Undisclosed"],
+      status: "Upcoming Area",
+      restricted: true
     }
   ];
 
@@ -187,9 +162,17 @@ export default function Research() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="card group hover:scale-105 transition-transform duration-300"
+                  className="card group hover:scale-105 transition-transform duration-300 relative overflow-hidden"
                 >
-                  <div className="flex items-start space-x-4">
+                  {area.restricted && (
+                    <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-gray-900/80 backdrop-blur-md">
+                      <Shield className="w-12 h-12 text-red-500 mb-2 opacity-80" />
+                      <span className="text-red-400 font-bold tracking-widest uppercase border border-red-500/50 px-4 py-2 rounded shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+                        Access Restricted
+                      </span>
+                    </div>
+                  )}
+                  <div className={`flex items-start space-x-4 ${area.restricted ? 'opacity-30 blur-sm pointer-events-none' : ''}`}>
                     <div className="p-3 bg-gray-800 rounded-xl text-white group-hover:bg-gray-700 transition-colors duration-300">
                       {area.icon}
                     </div>
@@ -198,7 +181,7 @@ export default function Research() {
                         <h3 className="text-xl font-semibold text-white">
                           {area.title}
                         </h3>
-                        <span className={`text-sm font-medium px-2 py-1 rounded-full ${
+                        <span className={`text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider ${
                           area.status === 'Active Research' ? 'bg-blue-500/20 text-blue-400' :
                           area.status === 'Breakthrough Phase' ? 'bg-purple-500/20 text-purple-400' :
                           area.status === 'Production Ready' ? 'bg-green-500/20 text-green-400' :
@@ -216,16 +199,11 @@ export default function Research() {
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Research Focus:</h4>
                         <div className="flex flex-wrap gap-2">
                           {area.focus.map((focus, idx) => (
-                            <span key={idx} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
+                            <span key={idx} className="text-[10px] bg-gray-800 text-gray-300 px-2 py-1 rounded border border-gray-700">
                               {focus}
                             </span>
                           ))}
                         </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between text-sm text-gray-400">
-                        <span>{area.papers} papers published</span>
-                        <span>{area.team}</span>
                       </div>
                     </div>
                   </div>

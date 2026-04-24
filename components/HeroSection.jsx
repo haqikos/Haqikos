@@ -1,26 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, ChevronDown } from "lucide-react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 const HeroSection = () => {
   const [isLoading, setIsLoading] = useState(false);
 
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
   const handleTryAI = async () => {
     setIsLoading(true);
-    // Simulate API call
-    setTimeout(() => setIsLoading(false), 2000);
+    window.location.href = "https://qia.haqikos.com";
   };
 
   const handleExploreTools = () => {
-    // Navigate to tools section or page
-    console.log("Exploring tools...");
-  };
-
-  const handleJoinRevolution = () => {
-    // Navigate to signup or community page
-    console.log("Joining revolution...");
+    document.getElementById('vision-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -28,58 +27,65 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black"></div>
+      {/* tsParticles Background Elements */}
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          fullScreen: { enable: false, zIndex: 0 },
+          background: {
+            color: {
+              value: "transparent",
+            },
+          },
+          fpsLimit: 120,
+          particles: {
+            color: {
+              value: "#3b82f6",
+            },
+            links: {
+              color: "#8b5cf6",
+              distance: 150,
+              enable: true,
+              opacity: 0.3,
+              width: 1,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 1.5,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 60,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 3 },
+            },
+          },
+          detectRetina: true,
+        }}
+        className="absolute inset-0 w-full h-full opacity-40 mix-blend-screen"
+      />
 
-        {/* Neural Network Grid */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-gray-700 rounded-full"></div>
-          <div className="absolute top-3/4 right-1/4 w-48 h-48 border border-gray-700 rounded-full"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-32 h-32 border border-gray-700 rounded-full"></div>
-        </div>
-
-        {/* Floating Particles */}
-        <motion.div
-          className="absolute top-1/4 left-1/3 w-2 h-2 bg-white rounded-full"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.3, 1, 0.3],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 right-1/4 w-1 h-1 bg-white rounded-full"
-          animate={{
-            y: [0, 15, 0],
-            opacity: [0.5, 1, 0.5],
-          }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-white rounded-full"
-          animate={{
-            y: [0, -10, 0],
-            opacity: [0.4, 1, 0.4],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black pointer-events-none z-0"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center mt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,34 +93,39 @@ const HeroSection = () => {
         >
           {/* Badge */}
           <motion.div
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-gray-900/50 backdrop-blur-sm rounded-full border border-gray-700 mb-8"
+            className="inline-flex items-center space-x-2 px-4 py-2 bg-gray-900/50 backdrop-blur-sm rounded-full border border-gray-700 mb-8 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            role="status"
-            aria-label="Current status: Quantum AI Revolution"
           >
             <div className="w-5 h-5 relative">
               <img
                 src="/logo.svg"
                 alt="Haqikos Logo"
                 className="w-full h-full"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.innerHTML = '<div class="w-full h-full rounded-full bg-blue-500"></div>';
+                }}
               />
             </div>
-            <span className="text-sm text-gray-300">Quantum AI Revolution</span>
+            <span className="text-sm font-medium gradient-text">Quantum AI Revolution</span>
           </motion.div>
 
           {/* Main Headline */}
           <motion.h1
             id="hero-heading"
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold gradient-text mb-6 leading-tight"
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold font-orbitron gradient-text mb-6 leading-tight relative overflow-hidden group"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Reimagining the Future of AI.
+            <span className="relative z-10">Reimagining the Future of AI.</span>
             <br />
-            <span className="text-white">One Model at a Time.</span>
+            <span className="text-white relative z-10 font-grotesk text-4xl sm:text-5xl border-b border-blue-500/0 hover:border-blue-500 transition-colors">One Model at a Time.</span>
+            
+            {/* Shimmer Effect */}
+            <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-10 group-hover:animate-shimmer" />
           </motion.h1>
 
           {/* Subheadline */}
@@ -136,80 +147,36 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <motion.button
-              className={`btn-primary flex items-center space-x-2 ${
-                isLoading ? "btn-loading" : ""
-              }`}
-              whileHover={{ scale: isLoading ? 1 : 1.05 }}
-              whileTap={{ scale: isLoading ? 1 : 0.95 }}
+              className={`btn-primary flex items-center space-x-2`}
               onClick={handleTryAI}
               disabled={isLoading}
-              aria-label="Try our AI platform"
             >
-              <span>{isLoading ? "Loading..." : "Try Our AI"}</span>
-              {!isLoading && <ArrowRight className="w-5 h-5" />}
+              <span>{isLoading ? "Redirecting..." : "Explore QIA"}</span>
+              {!isLoading && <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-1" />}
             </motion.button>
 
             <motion.button
-              className="btn-secondary flex items-center space-x-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="btn-secondary flex items-center space-x-2 relative group overflow-hidden border-2 border-gray-700 bg-gray-900/50 hover:border-white transition-all duration-300"
               onClick={handleExploreTools}
-              aria-label="Explore our AI tools and features"
             >
-              <Play className="w-5 h-5" />
-              <span>Explore Our Tools</span>
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Play className="w-5 h-5 relative z-10" />
+              <span className="relative z-10">Our Vision</span>
             </motion.button>
-
-            <motion.button
-              className="btn-secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={handleJoinRevolution}
-              aria-label="Join the AI revolution community"
-            >
-              Join the Revolution
-            </motion.button>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            role="region"
-            aria-label="Platform statistics"
-          >
-            <div className="text-center">
-              <div
-                className="text-3xl font-bold text-white mb-2"
-                aria-label="10 million plus active users"
-              >
-                10M+
-              </div>
-              <div className="text-gray-400">Active Users</div>
-            </div>
-            <div className="text-center">
-              <div
-                className="text-3xl font-bold text-white mb-2"
-                aria-label="99.9 percent uptime"
-              >
-                99.9%
-              </div>
-              <div className="text-gray-400">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div
-                className="text-3xl font-bold text-white mb-2"
-                aria-label="50 plus countries"
-              >
-                50+
-              </div>
-              <div className="text-gray-400">Countries</div>
-            </div>
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Scroll indicator bounce down */}
+      <motion.div
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+        onClick={handleExploreTools}
+      >
+        <ChevronDown className="w-10 h-10 text-gray-500 hover:text-white transition-colors" />
+      </motion.div>
     </section>
   );
 };

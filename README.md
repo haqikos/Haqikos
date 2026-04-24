@@ -8,7 +8,7 @@ A comprehensive, modern website for Haqikos, an advanced AI company, inspired by
 - ✅ **Home** (`/`) - Landing page with hero section, features, and company overview
 - ✅ **About Us** (`/about`) - Company information and team details
 - ✅ **Vision & Mission** (`/vision-mission`) - Company vision, mission, and values
-- ✅ **AI Products** (`/products`) - Comprehensive product showcase and services
+- ✅ **Projects** (`/projects`) - Comprehensive product showcase and services
 - ✅ **Research & Innovation** (`/research`) - Research areas, papers, and partnerships
 - ✅ **Careers** (`/careers`) - Job opportunities, internships, and company culture
 - ✅ **Blog & Resources** (`/blog`) - AI insights, research updates, and educational content

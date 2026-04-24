@@ -316,6 +316,30 @@ const AboutPage = () => {
             ))}
           </motion.div>
           
+          {/* Founder's Note Card */}
+          <motion.div
+            className="mt-12 bg-gray-900 border border-gray-800 rounded-3xl p-8 md:p-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-blue-500/20 border-4 border-gray-800 flex items-center justify-center flex-shrink-0 text-7xl overflow-hidden">
+                👨‍💼
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">A Note from Our Founder</h3>
+                <p className="text-gray-400 italic mb-6 leading-relaxed text-lg">
+                  "Artificial intelligence shouldn't be a cold, mechanical tool. It should act as an extension of human creativity, capability, and empathy. When we founded Haqikos, our core belief was that the intersection of human and machine intelligence represents the next fundamental leap for society. I'm incredibly proud of what this team has built, and more importantly, where we are headed."
+                </p>
+                <div className="flex flex-col">
+                  <span className="font-bold text-white text-xl">Harsh Vashishtha</span>
+                  <span className="text-blue-400">Founder & CEO, Haqikos</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          
           <motion.div 
             className="text-center mt-12"
             initial={{ opacity: 0, y: 30 }}
@@ -332,7 +356,7 @@ const AboutPage = () => {
       </section>
 
       {/* Company Timeline */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gray-900/10">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -390,27 +414,32 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
+      {/* CTA / Contact Section */}
+      <section className="py-20 px-4 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="card bg-gray-900 p-8 md:p-12"
           >
-            <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Experience the Future of AI?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations already leveraging Haqikos' AI solutions to transform their operations.
+            <h2 className="text-4xl font-bold mb-6 gradient-text">Reach Out To Us</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Want to get in touch with our team directly? Send an email and we'll get back to you shortly.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/products" className="btn-primary">
-                Explore Our Products
-              </a>
-              <a href="/contact" className="btn-secondary">
-                Get in Touch
-              </a>
-            </div>
+            <form onSubmit={(e) => e.preventDefault()} className="max-w-md mx-auto space-y-4">
+              <input type="text" placeholder="Name" className="w-full bg-gray-800 border fill-white text-white border-gray-700 rounded-lg p-3 outline-none focus:border-blue-500" required />
+              <input type="email" placeholder="Email" className="w-full bg-gray-800 border fill-white text-white border-gray-700 rounded-lg p-3 outline-none focus:border-blue-500" required />
+              <textarea placeholder="Message" rows={4} className="w-full bg-gray-800 border fill-white text-white border-gray-700 rounded-lg p-3 outline-none focus:border-blue-500" required></textarea>
+              <button 
+                type="submit"
+                onClick={() => window.location.href = "mailto:contact@haqikos.com"}
+                className="btn-primary w-full shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+              >
+                Send Message via Mail client
+              </button>
+            </form>
           </motion.div>
         </div>
       </section>

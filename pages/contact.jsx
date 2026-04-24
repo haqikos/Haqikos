@@ -521,7 +521,7 @@ export default function Contact() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/products"
+                  href="/projects"
                   className="btn-primary inline-flex items-center justify-center"
                 >
                   Explore Our Solutions
