@@ -79,9 +79,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">H</span>
-              </div>
+              <img
+                src="/logo.svg"
+                alt="Haqikos"
+                style={{ height: "36px", width: "auto", objectFit: "contain" }}
+              />
               <span className="text-white font-bold text-xl">Haqikos</span>
             </a>
           </div>
