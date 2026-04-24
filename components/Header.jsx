@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,7 +90,10 @@ const Header = () => {
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <div>
+                  <div
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
                     <button
                       onClick={() => toggleDropdown(item.name)}
                       className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2"
@@ -98,11 +101,6 @@ const Header = () => {
                       aria-haspopup="true"
                     >
                       <span>{item.name}</span>
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? "rotate-180" : ""
-                        }`}
-                      />
                     </button>
 
                     <AnimatePresence>
@@ -199,11 +197,6 @@ const Header = () => {
                         className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-2"
                       >
                         <span>{item.name}</span>
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? "rotate-180" : ""
-                          }`}
-                        />
                       </button>
 
                       {activeDropdown === item.name && (
