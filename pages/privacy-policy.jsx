@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
+
 import { motion } from "framer-motion";
 import { 
   Shield, 
@@ -104,7 +104,6 @@ export default function PrivacyPolicy() {
       </Head>
 
       <main className="min-h-screen bg-black">
-        <Header />
         
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-gray-900 via-black to-black">
@@ -416,8 +415,6 @@ export default function PrivacyPolicy() {
             </motion.div>
           </div>
         </section>
-
-        <Footer />
       </main>
     </>
   );

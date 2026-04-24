@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { 
   Cpu, 
@@ -77,9 +75,7 @@ export default function QIA() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="min-h-screen bg-black">
-        <Header />
-        
+      <main className="min-h-screen bg-black">        
         {/* Aurora Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden bg-black min-h-[90vh] flex items-center">
           <div className="absolute inset-0 aurora-bg opacity-30"></div>
@@ -283,10 +279,7 @@ export default function QIA() {
               </a>
             </div>
           </motion.div>
-        </section>
-
-        <Footer />
-      </main>
+        </section>      </main>
     </>
   );
 }

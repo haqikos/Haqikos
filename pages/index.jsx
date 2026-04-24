@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../components/Header";
+
 import HeroSection from "../components/HeroSection";
 import AboutStats from "../components/AboutStats";
 import Features from "../components/Features";
@@ -7,7 +7,7 @@ import Testimonials from "../components/Testimonials";
 import ProductHighlight from "../components/ProductHighlight";
 import ResearchCards from "../components/ResearchCards";
 import Updates from "../components/Updates";
-import Footer from "../components/Footer";
+
 import PerformanceMonitor from "../components/PerformanceMonitor";
 
 export default function Home() {
@@ -108,7 +108,6 @@ export default function Home() {
 
       <main className="min-h-screen bg-black">
         <PerformanceMonitor />
-        <Header />
         <HeroSection />
         <AboutStats />
         <Features />
@@ -116,7 +115,6 @@ export default function Home() {
         <ProductHighlight />
         <ResearchCards />
         <Updates />
-        <Footer />
       </main>
     </>
   );

@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Users, 
@@ -144,9 +142,7 @@ export default function Careers() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="min-h-screen bg-black">
-        <Header />
-        
+      <main className="min-h-screen bg-black">        
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-gray-900 via-black to-black">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -352,10 +348,7 @@ export default function Careers() {
               ))}
             </div>
           </div>
-        </section>
-
-        <Footer />
-      </main>
+        </section>      </main>
 
       {/* Apply Modal */}
       <AnimatePresence>
