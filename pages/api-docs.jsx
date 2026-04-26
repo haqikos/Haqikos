@@ -12,7 +12,8 @@ import {
   ArrowRight,
   ExternalLink,
   Terminal,
-  Database
+  Database,
+  Clock
 } from "lucide-react";
 
 export default function APIDocs() {
@@ -57,7 +58,7 @@ export default function APIDocs() {
       version: "1.2.0",
       status: "Stable",
       statusColor: "text-green-400",
-      icon: "",
+      icon: <Terminal className="w-12 h-12 text-blue-400 mx-auto" />,
       description: "Full-featured Python SDK with async support and comprehensive examples."
     },
     {
@@ -65,7 +66,7 @@ export default function APIDocs() {
       version: "1.1.0",
       status: "Stable",
       statusColor: "text-green-400",
-      icon: "🟨",
+      icon: <Code className="w-12 h-12 text-blue-400 mx-auto" />,
       description: "Modern JavaScript SDK with TypeScript support and browser compatibility."
     },
     {
@@ -73,7 +74,7 @@ export default function APIDocs() {
       version: "0.9.0",
       status: "Beta",
       statusColor: "text-yellow-400",
-      icon: "",
+      icon: <Database className="w-12 h-12 text-blue-400 mx-auto" />,
       description: "Enterprise-ready Java SDK with Spring Boot integration support."
     },
     {
@@ -81,7 +82,7 @@ export default function APIDocs() {
       version: "0.8.0",
       status: "Beta",
       statusColor: "text-yellow-400",
-      icon: "",
+      icon: <Zap className="w-12 h-12 text-blue-400 mx-auto" />,
       description: "High-performance Go SDK optimized for microservices and cloud deployment."
     }
   ];
@@ -279,7 +280,7 @@ export default function APIDocs() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="card text-center group hover:scale-105 transition-transform duration-300"
                 >
-                  <div className="text-4xl mb-4">{sdk.icon}</div>
+                  <div className="mb-4">{sdk.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {sdk.name}
                   </h3>
@@ -407,7 +408,9 @@ export default function APIDocs() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4"></div>
+                <div className="flex justify-center mb-4">
+                  <Zap className="w-12 h-12 text-blue-400" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   API Playground
                 </h3>
@@ -423,7 +426,9 @@ export default function APIDocs() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4"></div>
+                <div className="flex justify-center mb-4">
+                  <Terminal className="w-12 h-12 text-blue-400" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Analytics Dashboard
                 </h3>
@@ -439,7 +444,9 @@ export default function APIDocs() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4"></div>
+                <div className="flex justify-center mb-4">
+                  <Code className="w-12 h-12 text-blue-400" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   CLI Tools
                 </h3>
@@ -460,7 +467,7 @@ export default function APIDocs() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-6xl mb-6"></div>
+              <Clock className="w-16 h-16 text-blue-500 mx-auto mb-6" />
               <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-6">
                 Full API Documentation Coming Soon
               </h2>

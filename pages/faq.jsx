@@ -299,7 +299,7 @@ export default function FAQ() {
                     transition={{ duration: 0.8 }}
                     className="text-center py-20"
                   >
-                    <div className="text-6xl mb-4"></div>
+                    <HelpCircle className="w-16 h-16 text-gray-700 mx-auto mb-4" />
                     <h3 className="text-2xl font-semibold text-white mb-2">No results found</h3>
                     <p className="text-gray-400">Try adjusting your search terms or browse our FAQ categories below.</p>
                   </motion.div>

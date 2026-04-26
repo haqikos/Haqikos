@@ -1,6 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Globe, 
+  MessageSquare, 
+  Users 
+} from "lucide-react";
 
 const Features = () => {
   const features = [
@@ -9,42 +17,42 @@ const Features = () => {
       description:
         "Advanced AI models that understand context and generate human-like responses with unprecedented accuracy.",
       stats: "99.9% Accuracy",
-      icon: "",
+      icon: Brain,
     },
     {
       title: "Lightning Fast",
       description:
         "Real-time processing and response generation with sub-second latency for seamless user experiences.",
       stats: "< 100ms Response",
-      icon: "",
+      icon: Zap,
     },
     {
       title: "Enterprise Security",
       description:
         "Bank-grade security protocols ensuring your data remains private and protected at all times.",
       stats: "SOC 2 Compliant",
-      icon: "",
+      icon: Shield,
     },
     {
       title: "Global Scale",
       description:
         "Deployed across multiple continents with 99.9% uptime and automatic failover systems.",
       stats: "99.9% Uptime",
-      icon: "",
+      icon: Globe,
     },
     {
       title: "Advanced NLP",
       description:
         "State-of-the-art natural language processing with multilingual support and context awareness.",
       stats: "50+ Languages",
-      icon: "️",
+      icon: MessageSquare,
     },
     {
       title: "Human-Centric",
       description:
         "Designed with human interaction in mind, providing intuitive and accessible AI experiences.",
       stats: "10M+ Users",
-      icon: "",
+      icon: Users,
     },
   ];
 
@@ -111,8 +119,12 @@ const Features = () => {
               tabIndex={0}
             >
               <div className="flex items-start space-x-4">
-                <div className="text-3xl" role="img" aria-label={feature.title}>
-                  {feature.icon}
+                <div 
+                  className="w-14 h-14 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-blue-500/20 flex items-center justify-center flex-shrink-0 shadow-[0_0_15px_rgba(0,168,255,0.15)] group-hover:border-blue-500/40 transition-colors" 
+                  role="img" 
+                  aria-label={feature.title}
+                >
+                  <feature.icon size={28} color="#00A8FF" strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold text-white mb-2">

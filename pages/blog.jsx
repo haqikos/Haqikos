@@ -6,13 +6,15 @@ import {
   BookOpen, 
   FileText, 
   Video, 
+  Shield,
   Users, 
   Calendar, 
   Clock, 
   ArrowRight,
   ExternalLink,
   Tag,
-  Search
+  Search,
+  User
 } from "lucide-react";
 import { useState } from "react";
 
@@ -36,7 +38,6 @@ export default function Blog() {
       excerpt: "Exploring the current state of artificial general intelligence research and what lies ahead in our quest for human-level AI.",
       author: "Dr. Sarah Chen",
       authorRole: "Lead AI Researcher",
-      authorAvatar: "‍",
       category: "research",
       tags: ["AGI", "Research", "Future of AI"],
       publishDate: "2024-01-15",
@@ -51,13 +52,12 @@ export default function Blog() {
       excerpt: "How quantum computing is revolutionizing artificial intelligence and enabling breakthroughs previously thought impossible.",
       author: "Dr. Michael Rodriguez",
       authorRole: "Quantum AI Specialist",
-      authorAvatar: "‍",
       category: "research",
       tags: ["Quantum AI", "Quantum Computing", "Machine Learning"],
       publishDate: "2024-01-12",
       readTime: "12 min read",
       featured: true,
-      image: "️",
+      image: "",
       slug: "quantum-ai-breaking-limits"
     },
     {
@@ -66,13 +66,12 @@ export default function Blog() {
       excerpt: "Practical guidelines for developing AI systems that are safe, ethical, and beneficial to humanity.",
       author: "Elena Petrov",
       authorRole: "AI Ethics Engineer",
-      authorAvatar: "‍",
       category: "tutorials",
       tags: ["AI Ethics", "Responsible AI", "Development"],
       publishDate: "2024-01-10",
       readTime: "15 min read",
       featured: false,
-      image: "️",
+      image: "",
       slug: "building-responsible-ai-guide"
     },
     {
@@ -81,7 +80,6 @@ export default function Blog() {
       excerpt: "A deep dive into how large language models work, their capabilities, and their implications for the future.",
       author: "Dr. Raj Patel",
       authorRole: "NLP Researcher",
-      authorAvatar: "‍",
       category: "tutorials",
       tags: ["LLMs", "NLP", "Deep Learning"],
       publishDate: "2024-01-08",
@@ -96,7 +94,6 @@ export default function Blog() {
       excerpt: "How artificial intelligence is revolutionizing healthcare delivery, diagnosis, and treatment planning.",
       author: "Dr. Wei Zhang",
       authorRole: "AI Healthcare Lead",
-      authorAvatar: "‍️",
       category: "ai-news",
       tags: ["Healthcare", "AI Applications", "Medical AI"],
       publishDate: "2024-01-05",
@@ -111,13 +108,12 @@ export default function Blog() {
       excerpt: "Examining the moral implications of AI systems making decisions that affect human lives and society.",
       author: "Dr. James Wilson",
       authorRole: "AI Ethics Researcher",
-      authorAvatar: "‍",
       category: "ethics",
       tags: ["AI Ethics", "Decision Making", "Moral AI"],
       publishDate: "2024-01-03",
       readTime: "11 min read",
       featured: false,
-      image: "️",
+      image: "",
       slug: "ethics-ai-decision-making"
     }
   ];
@@ -126,32 +122,42 @@ export default function Blog() {
     {
       title: "AI Research Papers",
       description: "Access our latest research publications and technical papers",
-      icon: "",
+      iconType: "BookOpen",
       link: "/research",
       type: "Research"
     },
     {
       title: "Developer Documentation",
       description: "Comprehensive guides and API documentation for developers",
-      icon: "",
+      iconType: "FileText",
       link: "/api-docs",
       type: "Technical"
     },
     {
       title: "AI Safety Guidelines",
       description: "Best practices and frameworks for building safe AI systems",
-      icon: "️",
+      iconType: "Shield",
       link: "/safety-guidelines",
       type: "Guidelines"
     },
     {
       title: "Educational Videos",
       description: "Video tutorials and presentations on AI concepts",
-      icon: "",
+      iconType: "Video",
       link: "/videos",
       type: "Educational"
     }
   ];
+
+  const renderResourceIcon = (type) => {
+    switch (type) {
+      case "BookOpen": return <BookOpen className="w-8 h-8 text-blue-400 mx-auto" />;
+      case "FileText": return <FileText className="w-8 h-8 text-blue-400 mx-auto" />;
+      case "Shield": return <Shield className="w-8 h-8 text-blue-400 mx-auto" />;
+      case "Video": return <Video className="w-8 h-8 text-blue-400 mx-auto" />;
+      default: return null;
+    }
+  };
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -266,7 +272,15 @@ export default function Blog() {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="card group hover:scale-105 transition-transform duration-300"
                 >
-                  <div className="text-6xl mb-4">{post.image}</div>
+                  <div className="flex justify-center mb-6">
+                    {post.image ? (
+                      <div className="text-6xl">{post.image}</div>
+                    ) : (
+                      <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                        <BookOpen size={32} />
+                      </div>
+                    )}
+                  </div>
                   <div className="mb-4">
                     <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm font-medium rounded-full">
                       {post.category.charAt(0).toUpperCase() + post.category.slice(1)}
@@ -281,7 +295,9 @@ export default function Blog() {
                   
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-3">
-                      <div className="text-2xl">{post.authorAvatar}</div>
+                      <div className="w-10 h-10 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center">
+                        <User className="w-5 h-5 text-blue-400" />
+                      </div>
                       <div>
                         <p className="text-white font-medium">{post.author}</p>
                         <p className="text-gray-400 text-sm">{post.authorRole}</p>
@@ -345,7 +361,15 @@ export default function Blog() {
                     className="card group hover:scale-102 transition-transform duration-300"
                   >
                     <div className="flex items-start space-x-6">
-                      <div className="text-4xl">{post.image}</div>
+                    <div className="flex-shrink-0">
+                      {post.image ? (
+                        <div className="text-4xl">{post.image}</div>
+                      ) : (
+                        <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                          <FileText size={24} />
+                        </div>
+                      )}
+                    </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-4 mb-3">
                           <span className="px-3 py-1 bg-gray-800 text-gray-300 text-sm font-medium rounded-full">
@@ -365,7 +389,9 @@ export default function Blog() {
                         
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-3">
-                            <div className="text-xl">{post.authorAvatar}</div>
+                            <div className="w-8 h-8 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center">
+                              <User className="w-4 h-4 text-blue-400" />
+                            </div>
                             <div>
                               <p className="text-white font-medium text-sm">{post.author}</p>
                               <p className="text-gray-400 text-xs">{post.authorRole}</p>
@@ -402,7 +428,7 @@ export default function Blog() {
                 transition={{ duration: 0.8 }}
                 className="text-center py-20"
               >
-                <div className="text-6xl mb-4"></div>
+                <Search className="w-16 h-16 text-gray-700 mx-auto mb-4" />
                 <h3 className="text-2xl font-semibold text-white mb-2">No posts found</h3>
                 <p className="text-gray-400">Try adjusting your search terms or category filters.</p>
               </motion.div>
@@ -438,7 +464,7 @@ export default function Blog() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="card text-center group hover:scale-105 transition-transform duration-300"
                 >
-                  <div className="text-4xl mb-4">{resource.icon}</div>
+                  <div className="mb-4">{renderResourceIcon(resource.iconType)}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {resource.title}
                   </h3>

@@ -37,7 +37,7 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "QIA", href: "/qia", highlight: true },
+    { name: "QIA", href: "/qia" },
     {
       name: "Company",
       href: "#",
@@ -129,13 +129,6 @@ const Header = () => {
                       )}
                     </AnimatePresence>
                   </div>
-                ) : item.highlight ? (
-                  <a
-                    href={item.href}
-                    className="text-blue-400 hover:text-blue-300 transition-colors duration-200 py-2 font-semibold"
-                  >
-                    {item.name}
-                  </a>
                 ) : (
                   <a
                     href={item.href}
@@ -166,7 +159,7 @@ const Header = () => {
             {/* Try QIA button */}
             <a
               href="/qia"
-              className="hidden sm:inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 shadow-[0_0_12px_rgba(59,130,246,0.4)]"
+              className="hidden sm:inline-flex items-center px-4 py-2 border border-white text-white hover:bg-white hover:text-black font-semibold rounded-lg transition-all duration-200 hover:scale-105"
             >
               Try QIA
             </a>
@@ -248,7 +241,7 @@ const Header = () => {
               <div className="pt-4 border-t border-gray-700 space-y-3">
                 <a
                   href="/qia"
-                  className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all duration-200 shadow-[0_0_12px_rgba(59,130,246,0.4)]"
+                  className="inline-flex items-center justify-center w-full px-4 py-2 border border-white text-white font-semibold rounded-lg transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Try QIA

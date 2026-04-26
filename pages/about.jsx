@@ -12,7 +12,8 @@ import {
   Star,
   Building2,
   Calendar,
-  MapPin
+  MapPin,
+  User
 } from 'lucide-react';
 
 const AboutPage = () => {
@@ -43,37 +44,6 @@ const AboutPage = () => {
       icon: Globe,
       title: "Global Impact",
       description: "We're committed to making AI accessible worldwide, bridging technological gaps and empowering diverse communities."
-    }
-  ];
-
-  const teamMembers = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief AI Officer",
-      expertise: "Machine Learning, Neural Networks",
-      experience: "15+ years in AI research",
-      avatar: "‍"
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "Head of Engineering",
-      expertise: "Full-Stack Development, AI Infrastructure",
-      experience: "12+ years in software engineering",
-      avatar: "‍"
-    },
-    {
-      name: "Dr. James Kim",
-      role: "Research Director",
-      expertise: "Computer Vision, Deep Learning",
-      experience: "18+ years in AI academia",
-      avatar: "‍"
-    },
-    {
-      name: "Priya Patel",
-      role: "Product Strategy Lead",
-      expertise: "AI Product Management, UX Design",
-      experience: "10+ years in tech products",
-      avatar: "‍"
     }
   ];
 
@@ -277,80 +247,30 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Founder Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 gradient-text">Meet Our Team</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our diverse team of AI experts, researchers, and engineers are the driving force behind Haqikos' success.
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {teamMembers.map((member, index) => (
-              <motion.div 
-                key={index}
-                className="p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 text-center"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="text-6xl mb-4">{member.avatar}</div>
-                <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                <p className="text-blue-400 mb-3">{member.role}</p>
-                <p className="text-gray-300 mb-2 text-sm">{member.expertise}</p>
-                <p className="text-gray-400 text-sm">{member.experience}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-          
-          {/* Founder's Note Card */}
           <motion.div
-            className="mt-12 bg-gray-900 border border-gray-800 rounded-3xl p-8 md:p-12"
+            className="bg-gray-900 border border-gray-800 rounded-3xl p-8 md:p-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-blue-500/20 border-4 border-gray-800 flex items-center justify-center flex-shrink-0 text-7xl overflow-hidden">
-                ‍
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-blue-500/10 border-4 border-blue-500/20 flex items-center justify-center flex-shrink-0 overflow-hidden shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+                <User size={64} color="#00A8FF" strokeWidth={1.5} />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">A Note from Our Founder</h3>
-                <p className="text-gray-400 italic mb-6 leading-relaxed text-lg">
-                  "Artificial intelligence shouldn't be a cold, mechanical tool. It should act as an extension of human creativity, capability, and empathy. When we founded Haqikos, our core belief was that the intersection of human and machine intelligence represents the next fundamental leap for society. I'm incredibly proud of what this team has built, and more importantly, where we are headed."
+                <p className="text-gray-300 italic mb-6 leading-relaxed text-lg">
+                  "I built HAQIKOS because I believe India is ready for its own AI era — not as a consumer of foreign technology, but as a builder of it. Every line of code, every product decision, every feature in QIA comes from one place: the belief that we can build something the world has never seen, right here. HAQIKOS isn't just a company. It's a statement. And we're just beginning."
                 </p>
                 <div className="flex flex-col">
                   <span className="font-bold text-white text-xl">Harsh Vashishtha</span>
-                  <span className="text-blue-400">Founder & CEO, Haqikos</span>
+                  <span className="text-blue-400">Founder & CEO, HAQIKOS</span>
                 </div>
               </div>
             </div>
-          </motion.div>
-          
-          <motion.div 
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <a href="/careers" className="btn-primary inline-flex items-center">
-              Join Our Team
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
           </motion.div>
         </div>
       </section>

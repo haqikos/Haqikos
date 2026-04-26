@@ -9,7 +9,8 @@ import {
   Twitter, 
   Linkedin, 
   Github,
-  ArrowRight
+  ArrowRight,
+  Heart
 } from "lucide-react";
 
 const Footer = () => {
@@ -156,7 +157,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
             <div className="text-gray-400 text-sm mb-4 md:mb-0 flex items-center">
-              © {currentYear} Haqikos. Made with ️ in India 
+              © {currentYear} Haqikos. Made with <Heart className="w-3 h-3 text-red-500 mx-1 inline" /> in India 
             </div>
 
             {/* Social Links */}

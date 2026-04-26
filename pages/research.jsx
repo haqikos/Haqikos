@@ -10,6 +10,7 @@ import {
   Database, 
   Shield, 
   Globe, 
+  Building2,
   Users,
   BookOpen,
   Award,
@@ -84,22 +85,22 @@ export default function Research() {
     {
       name: "MIT AI Lab",
       description: "Collaborative research in AGI and cognitive architectures",
-      logo: "️"
+      logo: <Building2 className="w-12 h-12 text-blue-400 mx-auto" />
     },
     {
       name: "Stanford AI Institute",
       description: "Joint projects in quantum AI and machine learning",
-      logo: ""
+      logo: <Building2 className="w-12 h-12 text-blue-400 mx-auto" />
     },
     {
       name: "Google Research",
       description: "Partnership in large language models and NLP",
-      logo: ""
+      logo: <Globe className="w-12 h-12 text-blue-400 mx-auto" />
     },
     {
       name: "OpenAI",
       description: "Collaborative work on AI safety and alignment",
-      logo: ""
+      logo: <Shield className="w-12 h-12 text-blue-400 mx-auto" />
     }
   ];
 
@@ -321,7 +322,7 @@ export default function Research() {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="card text-center group hover:scale-105 transition-transform duration-300"
                 >
-                  <div className="text-4xl mb-4">{partner.logo}</div>
+                  <div className="mb-4">{partner.logo}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {partner.name}
                   </h3>

@@ -140,7 +140,7 @@ export default function QIA() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="inline-flex items-center px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-6">
+                <div className="inline-flex items-center px-3 py-1 rounded-full border border-white/30 bg-white/10 text-white text-sm font-medium mb-6">
                   <Sparkles className="w-4 h-4 mr-2" /> Meet QIA v1.0
                 </div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -314,7 +314,7 @@ export default function QIA() {
                 <thead>
                   <tr className="bg-gray-900 border-b border-gray-800">
                     <th className="p-4 text-gray-300 font-semibold w-1/3">Feature</th>
-                    <th className="p-4 text-blue-400 font-bold w-1/3 border-l border-r border-gray-800 bg-gray-800/30">QIA</th>
+                    <th className="p-4 text-white font-bold w-1/3 border-l border-r border-gray-800 bg-gray-800/30">QIA</th>
                     <th className="p-4 text-gray-500 font-semibold w-1/3">Others</th>
                   </tr>
                 </thead>
