@@ -2,38 +2,38 @@
 
 A comprehensive, modern website for Haqikos, an advanced AI company, inspired by Perplexity.ai and Claude.ai designs. Built with Next.js, featuring a professional, futuristic design with smooth animations and full responsiveness.
 
-## 🚀 Features
+##  Features
 
 ### **Core Website Pages**
-- ✅ **Home** (`/`) - Landing page with hero section, features, and company overview
-- ✅ **About Us** (`/about`) - Company information and team details
-- ✅ **Vision & Mission** (`/vision-mission`) - Company vision, mission, and values
-- ✅ **Projects** (`/projects`) - Comprehensive product showcase and services
-- ✅ **Research & Innovation** (`/research`) - Research areas, papers, and partnerships
-- ✅ **Careers** (`/careers`) - Job opportunities, internships, and company culture
-- ✅ **Blog & Resources** (`/blog`) - AI insights, research updates, and educational content
-- ✅ **Contact Us** (`/contact`) - Multiple contact methods and forms
-- ✅ **Privacy Policy** (`/privacy-policy`) - Data protection and privacy information
-- ✅ **Terms & Conditions** (`/terms`) - Legal terms and service agreements
-- ✅ **FAQ** (`/faq`) - Frequently asked questions with search functionality
-- ✅ **Community** (`/community`) - Community features and future plans
-- ✅ **API Documentation** (`/api-docs`) - Developer resources and SDKs
+-  **Home** (`/`) - Landing page with hero section, features, and company overview
+-  **About Us** (`/about`) - Company information and team details
+-  **Vision & Mission** (`/vision-mission`) - Company vision, mission, and values
+-  **Projects** (`/projects`) - Comprehensive product showcase and services
+-  **Research & Innovation** (`/research`) - Research areas, papers, and partnerships
+-  **Careers** (`/careers`) - Job opportunities, internships, and company culture
+-  **Blog & Resources** (`/blog`) - AI insights, research updates, and educational content
+-  **Contact Us** (`/contact`) - Multiple contact methods and forms
+-  **Privacy Policy** (`/privacy-policy`) - Data protection and privacy information
+-  **Terms & Conditions** (`/terms`) - Legal terms and service agreements
+-  **FAQ** (`/faq`) - Frequently asked questions with search functionality
+-  **Community** (`/community`) - Community features and future plans
+-  **API Documentation** (`/api-docs`) - Developer resources and SDKs
 
 ### **Design & User Experience**
-- 🎨 **Modern Design** - Inspired by Perplexity.ai and Claude.ai
-- 🌙 **Dark Theme** - Professional black/dark gray color scheme
-- ✨ **Smooth Animations** - Framer Motion animations throughout
-- 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile
-- ♿ **Accessibility** - ARIA labels, keyboard navigation, and focus management
-- 🔍 **SEO Optimized** - Meta tags, structured data, and Open Graph
+-  **Modern Design** - Inspired by Perplexity.ai and Claude.ai
+-  **Dark Theme** - Professional black/dark gray color scheme
+-  **Smooth Animations** - Framer Motion animations throughout
+-  **Fully Responsive** - Optimized for desktop, tablet, and mobile
+-  **Accessibility** - ARIA labels, keyboard navigation, and focus management
+-  **SEO Optimized** - Meta tags, structured data, and Open Graph
 
 ### **Technical Features**
-- ⚡ **Performance** - Optimized images, lazy loading, and performance monitoring
-- 🛡️ **Error Handling** - Error boundaries and graceful error management
-- 🔒 **Security** - Form validation and secure practices
-- 📊 **Analytics Ready** - Performance monitoring and Core Web Vitals tracking
+-  **Performance** - Optimized images, lazy loading, and performance monitoring
+- ️ **Error Handling** - Error boundaries and graceful error management
+-  **Security** - Form validation and secure practices
+-  **Analytics Ready** - Performance monitoring and Core Web Vitals tracking
 
-## 🏗️ Project Structure
+## ️ Project Structure
 
 ```
 Haqikos/
@@ -77,7 +77,7 @@ Haqikos/
 └── README.md                 # This file
 ```
 
-## 🛠️ Technology Stack
+## ️ Technology Stack
 
 - **Framework**: Next.js 13+ with App Router
 - **Styling**: Tailwind CSS with custom CSS variables
@@ -86,7 +86,7 @@ Haqikos/
 - **Fonts**: Inter and JetBrains Mono for typography
 - **Deployment**: Ready for Vercel, Netlify, or any hosting platform
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### **Prerequisites**
 - Node.js 16+ 
@@ -124,7 +124,7 @@ npm run build
 npm start
 ```
 
-## 🎨 Customization
+##  Customization
 
 ### **Colors & Theme**
 The website uses a sophisticated dark theme with:
@@ -148,7 +148,7 @@ Framer Motion animations include:
 - Smooth page transitions
 - Loading states and micro-interactions
 
-## 📱 Responsive Design
+##  Responsive Design
 
 The website is fully responsive with breakpoints:
 - **Mobile**: < 640px
@@ -161,7 +161,7 @@ All components adapt seamlessly across devices with:
 - Optimized layouts for each screen size
 - Responsive typography and spacing
 
-## 🔍 SEO & Performance
+##  SEO & Performance
 
 ### **SEO Features**
 - Meta tags for all pages
@@ -177,7 +177,7 @@ All components adapt seamlessly across devices with:
 - Core Web Vitals tracking
 - Optimized bundle sizes
 
-## 🚀 Deployment
+##  Deployment
 
 ### **Vercel (Recommended)**
 1. Connect your GitHub repository
@@ -189,7 +189,7 @@ All components adapt seamlessly across devices with:
 - **AWS Amplify**: Connect repository and auto-deploy
 - **Traditional Hosting**: Build and upload static files
 
-## 📚 Content Management
+##  Content Management
 
 ### **Adding New Pages**
 1. Create new page in `pages/` directory
@@ -203,7 +203,7 @@ All components adapt seamlessly across devices with:
 - Modify styles in `styles/globals.css`
 - Update Tailwind config for new design tokens
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -211,18 +211,18 @@ All components adapt seamlessly across devices with:
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
+##  License
 
 This project is proprietary to Haqikos. All rights reserved.
 
-## 🆘 Support
+##  Support
 
 For technical support or questions:
 - **Email**: dev-support@haqikos.ai
 - **Documentation**: Check this README and code comments
 - **Issues**: Create GitHub issues for bugs or feature requests
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 ### **Planned Features**
 - [ ] User authentication and accounts
@@ -244,6 +244,6 @@ For technical support or questions:
 
 ---
 
-**Built with ❤️ by the Haqikos Team**
+**Built with ️ by the Haqikos Team**
 
 *Shaping the future of artificial intelligence* 

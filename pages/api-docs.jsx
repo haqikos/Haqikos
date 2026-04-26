@@ -57,7 +57,7 @@ export default function APIDocs() {
       version: "1.2.0",
       status: "Stable",
       statusColor: "text-green-400",
-      icon: "🐍",
+      icon: "",
       description: "Full-featured Python SDK with async support and comprehensive examples."
     },
     {
@@ -73,7 +73,7 @@ export default function APIDocs() {
       version: "0.9.0",
       status: "Beta",
       statusColor: "text-yellow-400",
-      icon: "☕",
+      icon: "",
       description: "Enterprise-ready Java SDK with Spring Boot integration support."
     },
     {
@@ -81,7 +81,7 @@ export default function APIDocs() {
       version: "0.8.0",
       status: "Beta",
       statusColor: "text-yellow-400",
-      icon: "🐹",
+      icon: "",
       description: "High-performance Go SDK optimized for microservices and cloud deployment."
     }
   ];
@@ -407,7 +407,7 @@ export default function APIDocs() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4">🔧</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   API Playground
                 </h3>
@@ -423,7 +423,7 @@ export default function APIDocs() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4">📊</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Analytics Dashboard
                 </h3>
@@ -439,7 +439,7 @@ export default function APIDocs() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4">🚀</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   CLI Tools
                 </h3>
@@ -460,7 +460,7 @@ export default function APIDocs() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-6xl mb-6">🚀</div>
+              <div className="text-6xl mb-6"></div>
               <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-6">
                 Full API Documentation Coming Soon
               </h2>

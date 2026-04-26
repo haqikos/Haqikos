@@ -9,42 +9,42 @@ const Features = () => {
       description:
         "Advanced AI models that understand context and generate human-like responses with unprecedented accuracy.",
       stats: "99.9% Accuracy",
-      icon: "🧠",
+      icon: "",
     },
     {
       title: "Lightning Fast",
       description:
         "Real-time processing and response generation with sub-second latency for seamless user experiences.",
       stats: "< 100ms Response",
-      icon: "⚡",
+      icon: "",
     },
     {
       title: "Enterprise Security",
       description:
         "Bank-grade security protocols ensuring your data remains private and protected at all times.",
       stats: "SOC 2 Compliant",
-      icon: "🔒",
+      icon: "",
     },
     {
       title: "Global Scale",
       description:
         "Deployed across multiple continents with 99.9% uptime and automatic failover systems.",
       stats: "99.9% Uptime",
-      icon: "🌍",
+      icon: "",
     },
     {
       title: "Advanced NLP",
       description:
         "State-of-the-art natural language processing with multilingual support and context awareness.",
       stats: "50+ Languages",
-      icon: "🗣️",
+      icon: "️",
     },
     {
       title: "Human-Centric",
       description:
         "Designed with human interaction in mind, providing intuitive and accessible AI experiences.",
       stats: "10M+ Users",
-      icon: "👥",
+      icon: "",
     },
   ];
 

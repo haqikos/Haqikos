@@ -52,28 +52,28 @@ const AboutPage = () => {
       role: "Chief AI Officer",
       expertise: "Machine Learning, Neural Networks",
       experience: "15+ years in AI research",
-      avatar: "👩‍🔬"
+      avatar: "‍"
     },
     {
       name: "Marcus Rodriguez",
       role: "Head of Engineering",
       expertise: "Full-Stack Development, AI Infrastructure",
       experience: "12+ years in software engineering",
-      avatar: "👨‍💻"
+      avatar: "‍"
     },
     {
       name: "Dr. James Kim",
       role: "Research Director",
       expertise: "Computer Vision, Deep Learning",
       experience: "18+ years in AI academia",
-      avatar: "👨‍🎓"
+      avatar: "‍"
     },
     {
       name: "Priya Patel",
       role: "Product Strategy Lead",
       expertise: "AI Product Management, UX Design",
       experience: "10+ years in tech products",
-      avatar: "👩‍💼"
+      avatar: "‍"
     }
   ];
 
@@ -325,7 +325,7 @@ const AboutPage = () => {
           >
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-blue-500/20 border-4 border-gray-800 flex items-center justify-center flex-shrink-0 text-7xl overflow-hidden">
-                👨‍💼
+                ‍
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">A Note from Our Founder</h3>

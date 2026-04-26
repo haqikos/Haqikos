@@ -36,13 +36,13 @@ export default function Blog() {
       excerpt: "Exploring the current state of artificial general intelligence research and what lies ahead in our quest for human-level AI.",
       author: "Dr. Sarah Chen",
       authorRole: "Lead AI Researcher",
-      authorAvatar: "👩‍🔬",
+      authorAvatar: "‍",
       category: "research",
       tags: ["AGI", "Research", "Future of AI"],
       publishDate: "2024-01-15",
       readTime: "8 min read",
       featured: true,
-      image: "🧠",
+      image: "",
       slug: "future-of-agi-overview"
     },
     {
@@ -51,13 +51,13 @@ export default function Blog() {
       excerpt: "How quantum computing is revolutionizing artificial intelligence and enabling breakthroughs previously thought impossible.",
       author: "Dr. Michael Rodriguez",
       authorRole: "Quantum AI Specialist",
-      authorAvatar: "👨‍🔬",
+      authorAvatar: "‍",
       category: "research",
       tags: ["Quantum AI", "Quantum Computing", "Machine Learning"],
       publishDate: "2024-01-12",
       readTime: "12 min read",
       featured: true,
-      image: "⚛️",
+      image: "️",
       slug: "quantum-ai-breaking-limits"
     },
     {
@@ -66,13 +66,13 @@ export default function Blog() {
       excerpt: "Practical guidelines for developing AI systems that are safe, ethical, and beneficial to humanity.",
       author: "Elena Petrov",
       authorRole: "AI Ethics Engineer",
-      authorAvatar: "👩‍💻",
+      authorAvatar: "‍",
       category: "tutorials",
       tags: ["AI Ethics", "Responsible AI", "Development"],
       publishDate: "2024-01-10",
       readTime: "15 min read",
       featured: false,
-      image: "🛡️",
+      image: "️",
       slug: "building-responsible-ai-guide"
     },
     {
@@ -81,13 +81,13 @@ export default function Blog() {
       excerpt: "A deep dive into how large language models work, their capabilities, and their implications for the future.",
       author: "Dr. Raj Patel",
       authorRole: "NLP Researcher",
-      authorAvatar: "👨‍💻",
+      authorAvatar: "‍",
       category: "tutorials",
       tags: ["LLMs", "NLP", "Deep Learning"],
       publishDate: "2024-01-08",
       readTime: "10 min read",
       featured: false,
-      image: "📝",
+      image: "",
       slug: "large-language-models-understanding"
     },
     {
@@ -96,13 +96,13 @@ export default function Blog() {
       excerpt: "How artificial intelligence is revolutionizing healthcare delivery, diagnosis, and treatment planning.",
       author: "Dr. Wei Zhang",
       authorRole: "AI Healthcare Lead",
-      authorAvatar: "👩‍⚕️",
+      authorAvatar: "‍️",
       category: "ai-news",
       tags: ["Healthcare", "AI Applications", "Medical AI"],
       publishDate: "2024-01-05",
       readTime: "7 min read",
       featured: false,
-      image: "🏥",
+      image: "",
       slug: "ai-healthcare-transforming-care"
     },
     {
@@ -111,13 +111,13 @@ export default function Blog() {
       excerpt: "Examining the moral implications of AI systems making decisions that affect human lives and society.",
       author: "Dr. James Wilson",
       authorRole: "AI Ethics Researcher",
-      authorAvatar: "👨‍🎓",
+      authorAvatar: "‍",
       category: "ethics",
       tags: ["AI Ethics", "Decision Making", "Moral AI"],
       publishDate: "2024-01-03",
       readTime: "11 min read",
       featured: false,
-      image: "⚖️",
+      image: "️",
       slug: "ethics-ai-decision-making"
     }
   ];
@@ -126,28 +126,28 @@ export default function Blog() {
     {
       title: "AI Research Papers",
       description: "Access our latest research publications and technical papers",
-      icon: "📄",
+      icon: "",
       link: "/research",
       type: "Research"
     },
     {
       title: "Developer Documentation",
       description: "Comprehensive guides and API documentation for developers",
-      icon: "💻",
+      icon: "",
       link: "/api-docs",
       type: "Technical"
     },
     {
       title: "AI Safety Guidelines",
       description: "Best practices and frameworks for building safe AI systems",
-      icon: "🛡️",
+      icon: "️",
       link: "/safety-guidelines",
       type: "Guidelines"
     },
     {
       title: "Educational Videos",
       description: "Video tutorials and presentations on AI concepts",
-      icon: "🎥",
+      icon: "",
       link: "/videos",
       type: "Educational"
     }
@@ -402,7 +402,7 @@ export default function Blog() {
                 transition={{ duration: 0.8 }}
                 className="text-center py-20"
               >
-                <div className="text-6xl mb-4">🔍</div>
+                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-semibold text-white mb-2">No posts found</h3>
                 <p className="text-gray-400">Try adjusting your search terms or category filters.</p>
               </motion.div>

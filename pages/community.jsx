@@ -311,7 +311,7 @@ export default function Community() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4">📧</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Join Mailing List
                 </h3>
@@ -330,7 +330,7 @@ export default function Community() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4">🤝</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Volunteer
                 </h3>
@@ -349,7 +349,7 @@ export default function Community() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="card text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="text-4xl mb-4">💡</div>
+                <div className="text-4xl mb-4"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Share Ideas
                 </h3>
@@ -373,7 +373,7 @@ export default function Community() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-6xl mb-6">🚀</div>
+              <div className="text-6xl mb-6"></div>
               <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-6">
                 Community Platform Coming Soon
               </h2>

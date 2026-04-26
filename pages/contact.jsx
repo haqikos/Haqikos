@@ -85,21 +85,21 @@ export default function Contact() {
       country: "United States",
       address: "123 AI Boulevard, San Francisco, CA 94105",
       type: "Headquarters",
-      icon: "🏢"
+      icon: ""
     },
     {
       city: "New York",
       country: "United States",
       address: "456 Innovation Street, New York, NY 10001",
       type: "Research Office",
-      icon: "🏛️"
+      icon: "️"
     },
     {
       city: "London",
       country: "United Kingdom",
       address: "789 Tech Lane, London, EC1A 1BB",
       type: "European Hub",
-      icon: "🇬🇧"
+      icon: ""
     }
   ];
 

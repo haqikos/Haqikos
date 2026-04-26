@@ -21,7 +21,7 @@ class ErrorBoundary extends Component {
       return (
         <div className="min-h-screen bg-black flex items-center justify-center px-4">
           <div className="text-center max-w-md">
-            <div className="text-6xl mb-4">🚀</div>
+            <div className="text-6xl mb-4"></div>
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>

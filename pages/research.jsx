@@ -84,22 +84,22 @@ export default function Research() {
     {
       name: "MIT AI Lab",
       description: "Collaborative research in AGI and cognitive architectures",
-      logo: "🏛️"
+      logo: "️"
     },
     {
       name: "Stanford AI Institute",
       description: "Joint projects in quantum AI and machine learning",
-      logo: "🎓"
+      logo: ""
     },
     {
       name: "Google Research",
       description: "Partnership in large language models and NLP",
-      logo: "🔍"
+      logo: ""
     },
     {
       name: "OpenAI",
       description: "Collaborative work on AI safety and alignment",
-      logo: "🤖"
+      logo: ""
     }
   ];
 
